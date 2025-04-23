@@ -1,7 +1,7 @@
 // Luis Reséndez
 
 describe('Yellow or Blue', () => {
-    it('passes', () => {
+    it('click if its either yellow or blue', () => {
         cy.visit('https://thelab.boozang.com/yellowOrBlue')
         cy.get('.form_btn').click()
 

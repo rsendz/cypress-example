@@ -1,7 +1,7 @@
 // Luis Reséndez
 
 describe('Sorted list', () => {
-    it('passes', () => {
+    it('adds information to a list', () => {
         cy.visit('https://thelab.boozang.com/sortedList')
         cy.get('input').type('hola')
         cy.get('.form_btn').click()

@@ -1,7 +1,7 @@
 // Luis Reséndez
 
 describe('Wait Game', () => {
-    it('passes', () => {
+    it('wait 5 seconds to click on a button', () => {
       cy.visit('https://thelab.boozang.com/waitGame')
       cy.get('[data-testid="startBtn"]').click()
       cy.wait(5000)

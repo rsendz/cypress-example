@@ -16,7 +16,19 @@ describe('Cat shelter', () => {
           cy.get('.text-center > .form_btn').click()
           cy.wait(1000)
         })
-  
+
+        cy.get('.collection > *').then($items => {
+            const totalCats = $items.length
+            
+            cy.get(`.collection > :nth-child(${totalCats - 1})`).within(() => {
+              cy.get('.new_home > .fas').click()
+            })
+            cy.wait(500)
+            
+            cy.get(`.collection > :nth-child(${totalCats})`).within(() => {
+              cy.get('.new_home > .fas').click()
+            })
+        })
       })
     })
   })
